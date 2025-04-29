@@ -3,6 +3,7 @@
 import Header from '@/components/ui/Header';
 import RecipeForm from '@/components/recipe/RecipeForm';
 import RecipeDisplay from '@/components/recipe/RecipeDisplay';
+import ErrorMessage from '@/components/ui/ErrorMessage';
 import { useRecipes } from '@/context/RecipeContext';
 
 interface FormData {
@@ -65,9 +66,7 @@ export default function Home() {
             <RecipeForm onSubmit={handleSubmit} isLoading={loading} />
             
             {error && (
-              <div className="mt-4 p-4 bg-red-100 text-red-700 rounded-md">
-                {error}
-              </div>
+              <ErrorMessage message={error} onDismiss={() => setError(null)} />
             )}
           </div>
           
