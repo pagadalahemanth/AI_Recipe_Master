@@ -30,7 +30,7 @@ const RecipeForm: React.FC<RecipeFormProps> = ({ onSubmit, isLoading }) => {
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-xl font-semibold mb-4">Generate Your Recipe</h2>
+      <h2 className="text-xl font-semibold mb-4 text-gray-900">Generate Your Recipe</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label htmlFor="ingredients" className="block text-gray-700 font-medium mb-2">
@@ -42,7 +42,7 @@ const RecipeForm: React.FC<RecipeFormProps> = ({ onSubmit, isLoading }) => {
             value={formData.ingredients}
             onChange={handleChange}
             placeholder="e.g., chicken, rice, bell peppers, onions"
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-800 placeholder:text-gray-500"
             rows={3}
             required
           />
@@ -59,7 +59,7 @@ const RecipeForm: React.FC<RecipeFormProps> = ({ onSubmit, isLoading }) => {
             value={formData.dietaryPreferences}
             onChange={handleChange}
             placeholder="e.g., vegetarian, gluten-free, low-carb"
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-800 placeholder:text-gray-500"
           />
         </div>
 
@@ -72,14 +72,14 @@ const RecipeForm: React.FC<RecipeFormProps> = ({ onSubmit, isLoading }) => {
             name="mealType"
             value={formData.mealType}
             onChange={handleChange}
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-800"
           >
-            <option value="any">Any meal</option>
-            <option value="breakfast">Breakfast</option>
-            <option value="lunch">Lunch</option>
-            <option value="dinner">Dinner</option>
-            <option value="dessert">Dessert</option>
-            <option value="snack">Snack</option>
+            <option value="any" className="text-gray-800">Any meal</option>
+            <option value="breakfast" className="text-gray-800">Breakfast</option>
+            <option value="lunch" className="text-gray-800">Lunch</option>
+            <option value="dinner" className="text-gray-800">Dinner</option>
+            <option value="dessert" className="text-gray-800">Dessert</option>
+            <option value="snack" className="text-gray-800">Snack</option>
           </select>
         </div>
 
