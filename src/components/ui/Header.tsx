@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaUtensils } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Header: React.FC = () => {
   return (
@@ -11,9 +12,9 @@ const Header: React.FC = () => {
         </div>
         <nav>
           <ul className="flex space-x-4">
-            <li><a href="#" className="hover:underline">Home</a></li>
-            <li><a href="#" className="hover:underline">Saved Recipes</a></li>
-            <li><a href="#" className="hover:underline">About</a></li>
+            <li><Link href="/" className="hover:underline">Home</Link></li>
+            <li><Link href="/saved" className="hover:underline">Saved Recipes</Link></li>
+            <li><Link href="/about" className="hover:underline">About</Link></li>
           </ul>
         </nav>
       </div>
